@@ -10,7 +10,7 @@ public class Contrato {
 	private Date dataContrato;
 	private Double valorTotalContrato;
 
-	List<Parcelas> listParcelas = new ArrayList<>();
+	private List<Parcelas> listParcelas = new ArrayList<>();
 
 	public Contrato() {
 	}
@@ -37,12 +37,16 @@ public class Contrato {
 		this.dataContrato = dataContrato;
 	}
 
+	public Double getValorTotalContrato() {
+		return valorTotalContrato;
+	}
+
 	public void setValorTotalContrato(Double valorTotalContrato) {
 		this.valorTotalContrato = valorTotalContrato;
 	}
 
-	public void setListParcelas(List<Parcelas> listParcelas) {
-		this.listParcelas = listParcelas;
+	public List<Parcelas> getListParcelas() {
+		return listParcelas;
 	}
 
 	public void addParcelas(Parcelas parcelas) {

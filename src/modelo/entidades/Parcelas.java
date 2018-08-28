@@ -5,14 +5,11 @@ import java.util.Date;
 
 public class Parcelas {
 
+	private SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+	
 	private Double valorParcelas;
 	private Date dataPgtoParcelas;
 	
-	SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-	
-	public Parcelas() {
-	}
-
 	public Parcelas(Double valorParcelas, Date dataPgtoParcelas) {
 		this.valorParcelas = valorParcelas;
 		this.dataPgtoParcelas = dataPgtoParcelas;
@@ -34,6 +31,7 @@ public class Parcelas {
 		this.dataPgtoParcelas = dataPgtoParcelas;
 	}
 	
+	@Override
 	public String toString () {
 		return sdf.format(dataPgtoParcelas) + " - " + String.format("%.2f", valorParcelas);
 	}
